@@ -1,3 +1,7 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
 -- Chờ game và người chơi tải xong
 -- Đảm bảo game đã được tải và người chơi đã sẵn sàng
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
@@ -24,6 +28,76 @@ local function AutoSelectBlockFruitTeam()
 end
 
 AutoSelectBlockFruitTeam()
+----End
+
+---X2
+
+
+local Codes = {
+    "NEWTROLL",
+    "KITT_RESET",
+    "Sub2Fer999",
+    "Magicbus",
+    "kittgaming",
+    "SECRET_ADMIN",
+    "EXP_5B",
+    "CONTROL",
+    "UPDATE11",
+    "XMASEXP",
+    "1BILLION",
+    "ShutDownFix2",
+    "UPD14",
+    "STRAWHATMAINE",
+    "TantaiGaming",
+    "Colosseum",
+    "Axiore",
+    "Sub2Daigrock",
+    "Sky Island 3",
+    "Sub2OfficialNoobie",
+    "SUB2NOOBMASTER123",
+    "THEGREATACE",
+    "Fountain City",
+    "BIGNEWS",
+    "FUDD10",
+    "SUB2GAMERROBOT_EXP1",
+    "UPD15",
+    "2BILLION",
+    "UPD16",
+    "3BVISITS",
+    "Starcodeheo",
+    "Bluxxy",
+    "DRAGONABUSE",
+    "Sub2CaptainMaui",
+    "DEVSCOOKING",
+    "Enyu_is_Pro",
+    "JCWK",
+    "Starcodeheo",
+    "Bluxxy",
+    "fudd10_v2",
+    "SUB2GAMERROBOT_EXP1",
+    "Sub2NoobMaster123",
+    "Sub2UncleKizaru",
+    "Sub2Daigrock",
+    "Axiore",
+    "TantaiGaming",
+    "StrawHatMaine"
+}
+
+local function redeemCode(code)
+    pcall(function()
+        game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(code)
+    end)
+end
+
+if getgenv().x2Exp then
+    for _, code in pairs(Codes) do
+        task.spawn(function()
+            redeemCode(code)
+        end)
+        wait(1)  -- Thêm khoảng thời gian chờ giữa các lần gọi để tránh lỗi
+    end
+end
+--End
 
 ---FLY
 --- GUI Setup
@@ -39,7 +113,7 @@ local mine = Instance.new("TextButton")
 
 --Properties:
 
-main.Name = "TBoyRoblox "
+main.Name = "R2LX (Discord :@cayngaydem) "
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -83,7 +157,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(242, 60, 255)
 TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 100, 0, 28)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "gui by TBoyBoblox "
+TextLabel.Text = "buy a discord code "
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -135,11 +209,10 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 nowe = false
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "SUB TBoyBoblox ";
-    Text = "fly gui by TBoyBoblox ";
+    Title = "Đang Tải ";
+    Text = "Hãy Đợi Chút Nha ";
     Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
 Duration = 16;
-
 
 Frame.Active = true -- main = gui
 Frame.Draggable = true
@@ -400,7 +473,7 @@ plus.MouseButton1Down:connect(function()
 end)
 mine.MouseButton1Down:connect(function()
     if speeds == 1 then
-        speed.Text = 'can not be less than 1'
+        speed.Text = 'giới hạn là 1 đang tải lại'
         wait(1)
         speed.Text = speeds
     else
