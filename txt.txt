@@ -1,7 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
 local Player = game.Players.LocalPlayer --This Will Reveal The Player Name
   local Window = OrionLib:MakeWindow({
-		Name = "EXAMPLE HOW TO MAKE A KEY SYSTEM FOR MOBILE",
+		Name = "HOW TO MAKE A KEY",
 		HidePremium = false,
 		SaveConfig = true,
 		ConfigFolder = "OrionTest",
@@ -449,7 +449,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Copy Key",
 	Callback = function()
-      		setclipboard("Put The Link Here") --This Will Copy The Link Of The Key
+      		setclipboard("test") --This Will Copy The Link Of The Key link key
   	end    
 }) 
     
