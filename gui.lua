@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
 
 local Window = OrionLib:MakeWindow({Name = "TBoy Roblox", HidePremium = false, SaveConfig = true, ConfigFolder = "dxl_bf"})
 
@@ -369,4 +369,3 @@ Tab4:AddButton({
          loadstring(game:HttpGet("https://raw.githubusercontent.com/giaotrinhhoc/ZisRb/refs/heads/main/ZisRbV5"))()
   	end    
 }) --Put The Script That Will Load If The Key Is Correct Here
-end
