@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() --This Will Load The Script Code
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))() --This Will Load The Script Code
 
 local Window = OrionLib:MakeWindow({Name = "TBoy Roblox", HidePremium = false, SaveConfig = true, ConfigFolder = "dxl_bf"})
 
