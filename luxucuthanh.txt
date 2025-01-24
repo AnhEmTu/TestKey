@@ -4188,12 +4188,10 @@ if Second_Sea then
         end)
     end
 
-local ThemeDropdown = Tabs.Setting:AddDropdown({
-    Name = "Theme", -- Tên của dropdown 
-    Callback = function(selectedTheme) -- Hàm callback được gọi khi chọn theme
-        SaveManager:SetTheme(selectedTheme) -- Áp dụng theme đã chọn
-    end
-})
+local ThemeDropdown = Tabs.Setting:AddDropdown("ThemeDropdown")
+
+    SaveManager:IgnoreThemeSetting() -- Bỏ qua các cài đặt theme mặc định nếu cần
+
 local SettingFarm = Tabs.Setting:AddSection("Setting")
 
  local ToggleFastAttack = Tabs.Setting:AddToggle("ToggleFastAttack", {Title = "Fast Attack", Default = true })
@@ -6437,4 +6435,3 @@ Tabs.Misc:AddButton({
     end
 })
 
-SaveManager:IgnoreThemeSettings() -- Bỏ qua các cài đặt theme mặc định nếu cần
