@@ -1,4 +1,6 @@
-local Library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChanVanThanhIOS/refs/heads/main/uimain.txt")))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
        local Window = MakeWindow({
          Hub = {
@@ -31,6 +33,9 @@ local Library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanT
       
 ------ Tab
      local Tab1o = MakeTab({Name = "Chức Năng"})
+     
+local Options = Fluent.Options
+do
     
 --Place Id Check
 local id = game.PlaceId
