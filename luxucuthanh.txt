@@ -4188,8 +4188,8 @@ if Second_Sea then
         end)
     end
 
-local Toggle = Tabs.Setting:AddToggle("Turn V4", { Title = "Auto Tự Bật Tộc V4", Default = true })
-Toggle:OnChanged(function(Value)
+local TurnV4 = Tabs.Setting:AddToggle("TurnV4", { Title = "Auto Tự Bật Tộc V4", Default = true })
+TurnV4:OnChanged(function(Value)
     RaceNguLon = Value
 end)
 
