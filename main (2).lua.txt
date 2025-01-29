@@ -1,0 +1,29 @@
+local HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/1333851593501708413/fKo00_vnmX5HVixXJcZUPLSoy1hSgCV169HrN480vQhoxnJmgEkDxdUoJGP_C2PsZyq1" -- Link webhook discord
+
+
+local responce = syn.request(
+{
+      Url = Webhook_URL,
+      Method = 'POST',
+      Headers = {
+            ['Content-Type'] = 'application/json'
+          },
+      Body = HttpService:JSONEncode({
+           ["content"] = "",
+           ["embeds"] = {{
+               ["title"] = "**Your script has been executed!**",
+               ["description"] = game.Players.LocalPlayer.DisplayName.." has executed the script.",
+               ["type"] = "rich",                         
+               ["color"] = tonumber(0xffffff),
+               ["fields"] = {   
+                  {
+                       ["name"] = "Hardware Key:",
+                       ["value"] =  game:GetService("RbxAnalyticsService"):GetClientId(),
+                       ["inline"] =  true
+                  }
+               }
+           }}
+      })
+}
+)
