@@ -37,10 +37,10 @@ Highlight_Folder.Parent = game.CoreGui
 local Highlight = function(Target)
     local Highlight = Instance.new("Highlight")
     Highlight.Name = Target.Name
-    Highlight.FillColor = Color3.fromRGB(255, 102, 153)
+    Highlight.FillColor = Color3.fromRGB(255, 255, 0)
     Highlight.DepthMode = "AlwaysOnTop"
     Highlight.FillTransparency = 0.7
-    Highlight.OutlineColor = Color3.fromRGB(255, 102, 153)
+    Highlight.OutlineColor = Color3.fromRGB(255, 255, 0)
     Highlight.Parent = Highlight_Folder
     if Target.Character then
         Highlight.Adornee = Target.Character
